@@ -4,9 +4,17 @@
         <servlet-name>Registrar</servlet-name>
         <servlet-class>controller.Registrar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Buscar</servlet-name>
+        <servlet-class>controller.Buscar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Registrar</servlet-name>
         <url-pattern>/Registrar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Buscar</servlet-name>
+        <url-pattern>/Buscar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

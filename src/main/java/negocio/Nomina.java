@@ -43,6 +43,9 @@ public class Nomina {
         }
         return false;
     }
+    public Empleado FindEmpleado(String cod){
+        return empleadoDAO.findEmpleado(cod);
+    }
     public List<Empleado> getEmpleados(){
         return empleado;
     }
