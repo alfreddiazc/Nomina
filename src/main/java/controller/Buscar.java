@@ -33,17 +33,14 @@ public class Buscar extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        String cc=request.getParameter("cod");
+        String cc=request.getParameter("cc");
         Nomina n=new Nomina();
         Empleado e=n.FindEmpleado(cc);
         
         if(e!=null){
-            PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<t1>" + e.getNombre()+ "</t1>");
-		out.println("</body>");
-		out.println("</html>");
+            request.setAttribute("empleado",e);
+            request.getRequestDispatcher("./Empleado/find.jsp").forward(request, response);
+            
         }
     }
    
