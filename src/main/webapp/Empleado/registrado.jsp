@@ -37,6 +37,8 @@ caption {
         
     </head>
     <body>
+    <div class="container">
+       <div overflow-x:auto;>
         <%
             Nomina n = new Nomina();
 
@@ -57,5 +59,8 @@ caption {
                </tr>
             <%}%>
         </table>
+        </div>
+        
+        </div>
     </body>
 </html>
