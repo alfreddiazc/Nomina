@@ -12,55 +12,64 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Success</title>
         <link rel="sylesheet" href="css/style.css">
 
-<style>
-        table {
-   width: 100%;
-   border: 1px solid #000;
-}
-th, td {
-   width: 25%;
-   text-align: left;
-   vertical-align: top;
-   border: 1px solid #000;
-   border-collapse: collapse;
-   padding: 0.3em;
-   caption-side: bottom;
-}
-caption {
-   padding: 0.3em;
-}
-        
+        <style>
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid #ddd;
+            }
+
+            th, td {
+                width: 25%;
+                text-align: left;
+                vertical-align: top;
+                border: 1px solid #000;
+                border-collapse: collapse;
+                padding: 8px;
+                caption-side: bottom;
+            }
+            caption {
+                padding: 0.3em;
+            }
+            tr:nth-child(even){background-color: #f2f2f2}
+
         </style>
-        
+
     </head>
     <body>
-    <div class="container">
-       <div overflow-x:auto;>
-        <%
-            Nomina n = new Nomina();
+        <div class="col-md-12">
+                    <a href="./index.html">Home</a>
+            </div>
+        <div class="container">
+            
 
-        %>
-        <h1>Registro Exitoso!</h1>
+            <div style="overflow-x:auto;">
+                <%
+                    Nomina n = new Nomina();
 
-        <table style="width:100%">
-            <tr>
-                <th>Cedula</th>
-                <th>Nombre</th>
-            </tr>
-            <%  for (Empleado e : n.getEmpleados()) {
+                %>
+                <h1>Registro Exitoso!</h1>
 
-            %> <tr>
-                <td><%= e.getCedula() %></td>
-                <td><%= e.getNombre() %></td>
-                
-               </tr>
-            <%}%>
-        </table>
-        </div>
-        
+                <table style="width:100%">
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombre</th>
+                    </tr>
+                    <%  for (Empleado e : n.getEmpleados()) {
+
+                    %> <tr>
+                        <td><%= e.getCedula()%></td>
+                        <td><%= e.getNombre()%></td>
+
+                    </tr>
+                    <%}%>
+                </table>
+            </div>
+
         </div>
     </body>
 </html>
